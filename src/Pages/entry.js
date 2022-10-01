@@ -9,7 +9,7 @@ const Entry = () => {
             <div class="img-left d-none d-md-flex"></div>
 
             <div class="card-body">
-              <h4 class="title text-center mt-4">Check YOUR GENDER</h4>
+              <h4 class="title text-center mt-4">Check predicted of disease </h4>
               <form action="#" class="form-box px-3">
                 <div class="form-input">
                   <span>👤</span>
@@ -38,7 +38,7 @@ const Entry = () => {
                       class="custom-control-input"
                       id="cb1"
                     />
-                    <label for="cb1" class="custom-control-label">
+                    <label for="cb1" class="title custom-control-label">
                       Remember me
                     </label>
                   </div>
