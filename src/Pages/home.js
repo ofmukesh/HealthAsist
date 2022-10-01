@@ -1,9 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ReactSpeedometer from "react-d3-speedometer";
 
 const Home = () => {
   return (
     <div className="">
+      <ReactSpeedometer
+    needleHeightRatio={0.7}
+    maxSegmentLabels={5}
+    segments={5555}
+    needleColor="yellow"
+    startColor="blue"
+    endColor="red"
+    value={333}
+  />
+        <ReactSpeedometer
+    value={777}
+    needleColor="yellow"
+    startColor="#AAF"
+    endColor="tomato"
+    needleHeightRatio={0.5}
+    currentValueText="Happiness Level"
+    customSegmentLabels={[
+      {
+        text: "Very Bad",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "Bad",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "Ok",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "Good",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "Very Good",
+        position: "OUTSIDE",
+        color: "#666",
+      },
+    ]}
+  />
       <div className="row p-3">
         <div className="col-md-3 p-3">
           <div className="home-card home-card-1">
