@@ -1,0 +1,105 @@
+body {
+    height: 90vh;
+    background: linear-gradient(60deg, #396afc, #0575E6);
+    /* background: url(../hackvsit/3516628.jpg) !important; */
+    /* background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px); */
+    /* background: #0062e6 !important; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.img-left {
+    width: 40%;
+    background: url('/src/Assets/input.jpg') center;
+    background-color: #0062e6;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body {
+    padding: 4rem;
+}
+
+.title {
+    margin-bottom: 2rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input input {
+    width: 100%;
+    height: 37px;
+    padding-left: 50px;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 1px solid #00000020;
+    border-radius: 20PX;
+    outline: none;
+    background: transparent;
+}
+
+.form-input span {
+    position: absolute;
+    top: 5px;
+    padding-left: 10px;
+    color: #007bff;
+}
+
+.form-input input::placeholder {
+    color: black;
+    padding-left: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-input input:focus,
+.form-input input:valid {
+    border: 2px solid #1473d2;
+}
+
+.form-input input:focus::placeholder {
+    color: #454b69;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #007bff !important;
+    border: 0px;
+}
+
+.form-box button[type="submit"] {
+    margin-top: 10px;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    transition: 0.75s;
+    padding: 12px;
+    outline: none;
+}
+
+.form-box button[type="submit"]:hover {
+    background-color: #0069d9;
+    width: 100%;
+    letter-spacing: .5rem;
+}
