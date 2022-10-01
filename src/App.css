@@ -1,27 +1,21 @@
-body {
-    height: 90vh;
-    background: linear-gradient(60deg, #396afc, #0575E6);
-    /* background: url(../hackvsit/3516628.jpg) !important; */
-    /* background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    backdrop-filter: blur(10px); */
-    /* background: #0062e6 !important; */
+.entry {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    color: white;
+    background-color: #0062e6;
 }
 
-.card {
+.entry .card {
     overflow: hidden;
     border: 0 !important;
     border-radius: 20px !important;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
 }
 
-.img-left {
+.entry .img-left {
     width: 40%;
     background: url('/src/Assets/input.jpg') center;
     background-color: #0062e6;
@@ -29,20 +23,20 @@ body {
     background-position: center;
 }
 
-.card-body {
+.entry .card-body {
     padding: 4rem;
 }
 
-.title {
+.entry .title {
     margin-bottom: 2rem;
     font-family: 'Libre Baskerville', serif;
 }
 
-.form-input {
+.entry .form-input {
     position: relative;
 }
 
-.form-input input {
+.entry .form-input input {
     width: 100%;
     height: 37px;
     padding-left: 50px;
@@ -55,34 +49,34 @@ body {
     background: transparent;
 }
 
-.form-input span {
+.entry .form-input span {
     position: absolute;
     top: 5px;
     padding-left: 10px;
     color: #007bff;
 }
 
-.form-input input::placeholder {
+.entry .form-input input::placeholder {
     color: black;
     padding-left: 0px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.form-input input:focus,
-.form-input input:valid {
+.entry .form-input input:focus,
+.entry .form-input input:valid {
     border: 2px solid #1473d2;
 }
 
-.form-input input:focus::placeholder {
+.entry .form-input input:focus::placeholder {
     color: #454b69;
 }
 
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+.entry .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #007bff !important;
     border: 0px;
 }
 
-.form-box button[type="submit"] {
+.entry .form-box button[type="submit"] {
     margin-top: 10px;
     width: 50%;
     border: none;
@@ -98,7 +92,7 @@ body {
     outline: none;
 }
 
-.form-box button[type="submit"]:hover {
+.entry .form-box button[type="submit"]:hover {
     background-color: #0069d9;
     width: 100%;
     letter-spacing: .5rem;
