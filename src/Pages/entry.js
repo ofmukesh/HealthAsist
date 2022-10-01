@@ -14,9 +14,7 @@ const Entry = () => {
               <h4 class="title text-center mt-4">Check YOUR GENDER</h4>
               <form action="#" class="form-box px-3">
                 <div class="form-input">
-                  <span>
-                    <i class="fa-solid fa-users"></i>
-                  </span>
+                  <span>👤</span>
                   <input
                     type="text"
                     placeholder="Name"
@@ -25,14 +23,12 @@ const Entry = () => {
                   />
                 </div>
                 <div class="form-input">
-                  <span>
-                    <i class="fa-solid fa-person"></i>
-                  </span>
+                  <span>🔞</span>
                   <input type="number" placeholder="Age" tabindex="10" />
                 </div>
                 <div class="form-input">
                   <span>
-                    <i class="fa-solid fa-location-dot"></i>
+                    🗺️
                   </span>
                   <input type="text" placeholder="Location" tabindex="10" />
                 </div>
