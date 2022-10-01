@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, Outlet, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
+import Home from "./Pages/Home/home";
+import Entry from "./Pages/Home/entry";
+import { Erorr404, Offline500 } from "./Pages/Error/index";
 
-function App() {
+const App = () => {
+  function CheckData() {
+    if (!navigator.onLine) {
+      return <Offline500 />;
+    }
+    if (!localStorage.getItem("username") && !localStorage.getItem("userid")) {
+      return <Navigate to="/entry" />;
+    } else {
+      return <Outlet />;
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToastContainer />
+      <Routes>
+        <Route path="/entry" element={<Entry />} />
+        <Route element={<CheckData />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+        <Route path="*" element={<Erorr404 />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
