@@ -12,11 +12,11 @@ const App = () => {
     if (!navigator.onLine) {
       return <Offline500 />;
     }
-    if (!localStorage.getItem("user_name") && !localStorage.getItem("user_id")) {
-      return <Navigate to="/entry" />;
-    } else {
-      return <Outlet />;
-    }
+    // if (!localStorage.getItem("user_name") && !localStorage.getItem("user_id")) {
+    //   return <Navigate to="/entry" />;
+    // } else {
+    return <Outlet />;
+    // }
   }
   return (
     <div className="App">
@@ -25,7 +25,6 @@ const App = () => {
         <Route path="/entry" element={<Entry />} />
         <Route element={<CheckData />}>
           <Route path="/" element={<Home />} />
-          <Route path="/entry" element={<Entry />} />
         </Route>
         <Route path="*" element={<Erorr404 />} />
       </Routes>
