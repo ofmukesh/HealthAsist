@@ -3,8 +3,8 @@ import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import Home from "./Pages/Home/home";
-import Entry from "./Pages/Home/entry";
+import Home from "./Pages/home";
+import Entry from "./Pages/entry";
 import { Erorr404, Offline500 } from "./Pages/Error/index";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
     if (!navigator.onLine) {
       return <Offline500 />;
     }
-    if (!localStorage.getItem("username") && !localStorage.getItem("userid")) {
+    if (!localStorage.getItem("user_name") && !localStorage.getItem("user_id")) {
       return <Navigate to="/entry" />;
     } else {
       return <Outlet />;
@@ -25,6 +25,7 @@ const App = () => {
         <Route path="/entry" element={<Entry />} />
         <Route element={<CheckData />}>
           <Route path="/" element={<Home />} />
+          <Route path="/entry" element={<Entry />} />
         </Route>
         <Route path="*" element={<Erorr404 />} />
       </Routes>
