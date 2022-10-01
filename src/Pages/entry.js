@@ -1,11 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
 const Entry = () => {
-  const state = useSelector((state) => state.user);
   return (
     <div className="entry">
-      <div class="container">
+      <div class="container text-dark">
         <div class="row px-3">
           <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
             <div class="img-left d-none d-md-flex"></div>

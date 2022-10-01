@@ -1,3 +1,8 @@
+.row {
+    padding: 0;
+    margin: 0;
+}
+
 .entry {
     min-height: 100vh;
     display: flex;
@@ -129,4 +134,47 @@
 .food-desc{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+.home-card {
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.home-card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.home-card-1 {
+    background-image: url("/src/Assets/bmi.jpg");
+    background-size: 340px 225px;
+}
+
+.cards {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-card-1:hover .card-1 {
+    background-color: rgba(73, 74, 75, 0.295);
+    height: 200px;
+    transition: .5s;
+}
+
+.card-button {
+    display: none;
+}
+
+.cards:hover .card-button {
+    display: inline;
+}
+
+.home-cards .link {
+    text-decoration: none;
 }

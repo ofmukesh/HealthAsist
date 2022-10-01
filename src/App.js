@@ -19,7 +19,7 @@ const App = () => {
     // if (!localStorage.getItem("user_name") && !localStorage.getItem("user_id")) {
     //   return <Navigate to="/entry" />;
     // } else {
-      return <Outlet />;
+    return <Outlet />;
     // }
   }
   return (
@@ -29,7 +29,6 @@ const App = () => {
         <Route path="/entry" element={<Entry />} />
         <Route element={<CheckData />}>
           <Route path="/" element={<Home />} />
-          <Route path="/entry" element={<Entry />} />
           <Route path="/bmi" element={<BMI />} />
           <Route path="/Food" element={<Food />} />
         </Route>
