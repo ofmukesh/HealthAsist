@@ -11,7 +11,7 @@
 .landing-btn {
     border-radius: 10px;
     padding: 10px;
-    background-color:  #1acc8d;
+    background-color: #1acc8d;
     width: 150px;
     color: white;
     border: none;
@@ -203,7 +203,7 @@ p {
     transition: all 0.2s;
     background-color: transparent;
     background-repeat: no-repeat;
-    height: 200px;
+    height: 300px;
 }
 
 .home-card:hover {
@@ -213,8 +213,19 @@ p {
 
 .home-card-1 {
     background-image: url("/src/Assets/bmi.jpg");
-    background-size: 340px 225px;
+    background-size: cover;
 }
+
+.home-card-2 {
+    background-image: url("/src/Assets/disease.webp");
+    background-size: cover;
+}
+
+.home-card-3 {
+    background-image: url("/src/Assets/food.jpg");
+    background-size: cover;
+}
+
 
 .cards {
     border-radius: 10px;
@@ -226,7 +237,19 @@ p {
 
 .home-card-1:hover .card-1 {
     background-color: rgba(73, 74, 75, 0.295);
-    height: 200px;
+    height: 300px;
+    transition: .5s;
+}
+
+.home-card-2:hover .card-2 {
+    background-color: rgba(73, 74, 75, 0.295);
+    height: 300px;
+    transition: .5s;
+}
+
+.home-card-3:hover .card-3 {
+    background-color: rgba(73, 74, 75, 0.295);
+    height: 300px;
     transition: .5s;
 }
 

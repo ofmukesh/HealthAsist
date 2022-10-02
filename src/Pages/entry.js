@@ -1,56 +1,86 @@
 import React from "react";
+import api from "../Services/api";
 
 const Entry = () => {
+  function Submit(e) {
+    e.preventDefault();
+    var url =
+      "/entry/" +
+      e.target.gender.value +
+      "/" +
+      e.target.age.value +
+      "/" +
+      e.target.city.value;
+    console.log(url);
+  }
   return (
     <div className="entry">
-      <div class="container text-dark">
-        <div class="row px-3">
-          <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
-            <div class="img-left d-none d-md-flex"></div>
+      <div className="container text-dark">
+        <div className="row px-3">
+          <div className="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+            <div className="img-left d-none d-md-flex"></div>
 
-            <div class="card-body">
-              <h4 class="title text-center mt-4">
+            <div className="card-body">
+              <h4 className="title text-center mt-4">
                 Check predicted of disease{" "}
               </h4>
-              <form
-                action="#"
-                class="form-box px-3"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                <div class="form-input">
-                  <span>👤</span>
+              <form action="#" className="form-box px-3" onSubmit={Submit}>
+                <div className="form-input">
+                  <span>📆</span>
                   <input
-                    type="text"
-                    placeholder="Name"
-                    name="name"
-                    tabindex="10"
+                    type="number"
+                    id="age"
+                    placeholder="Age"
+                    tabIndex="10"
+                    required
                   />
                 </div>
-                <div class="form-input">
-                  <span>📆</span>
-                  <input type="number" placeholder="Age" tabindex="10" />
+                <div className="form-input">
+                  <select
+                    className="form-control"
+                    name=""
+                    id="gender"
+                    type="text"
+                    placeholder="gender"
+                    tabIndex="10"
+                    required
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Gender
+                    </option>
+                    <option value="Male">MAle</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
-                <div class="form-input">
-                  <span>🗺️</span>
-                  <input type="text" placeholder="Location" tabindex="10" />
+                <br />
+                <div className="form-input">
+                  <select
+                    className="form-control"
+                    name=""
+                    id="city"
+                    type="text"
+                    placeholder="City"
+                    tabIndex="10"
+                    required
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      City
+                    </option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Rohtak">Rohtak</option>
+                    <option value="Kochy">Kochy</option>
+                  </select>
                 </div>
 
-                <div class="mb-3">
-                  <div class="custom-control custom-checkbox">
-                    <input
-                      type="checkbox"
-                      class="custom-control-input"
-                      id="cb1"
-                    />
-                    <label for="cb1" class="title custom-control-label">
-                      Remember me
-                    </label>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <button type="submit" class="btn btn-block text-uppercase">
+                <div className="mb-3">
+                  <button
+                    type="submit"
+                    className="btn btn-block text-uppercase"
+                  >
                     Check
                   </button>
                 </div>

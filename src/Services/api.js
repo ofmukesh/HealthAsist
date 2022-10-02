@@ -2,7 +2,7 @@ import axios from "axios";
 import { EndPointApi } from "../Config/api_config";
 import { toast } from "react-toastify";
 
-export let api = async function ({
+ let api = async function ({
   method = "get",
   path,
   body,
@@ -33,3 +33,5 @@ var statusHelper = (data) => {
     return data.data;
   }
 };
+
+export default api

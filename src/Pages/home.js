@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import imgg from "../Assets/images/imgg.png";
 import ReactSpeedometer from "react-d3-speedometer";
 
 const Home = () => {
@@ -16,38 +15,46 @@ const Home = () => {
               <b>Health Assist</b>
             </h1>
             <br />
-            <Link to="/bmi" className="landing-btn">
+            <Link to="/entry" className="landing-btn">
               Get started
             </Link>
           </div>
         </div>
       </div>
 
-      <div className="row p-3">
-        <div className="col-md-3 p-3">
-          <div className="home-card home-card-1">
-            <div className="card-1 cards">
-              <Link to="bmi" className="card-button btn btn-warning">
-                Check
+      <div className="row p-5">
+        <div className="col-md-4 p-3">
+          <div className="home-card home-card-2">
+            <div className="card-2 cards">
+              <Link to="/entry" className="card-button btn btn-warning">
+                Check Disease
               </Link>
             </div>
           </div>
         </div>
-        <div className="col-md-3 p-3">
-          <div className="home-card home-card-2">
-            <div className="card-2 cards"></div>
-          </div>
-        </div>
-        <div className="col-md-3 p-3">
+        <div className="col-md-4 p-3">
           <div className="home-card home-card-3">
-            <div className="card-3 cards"></div>
+            <div className="card-3 cards">
+              <Link to="/food" className="card-button btn btn-warning">
+                Suggested food
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="col-md-3 p-3 home-card-4">
-          <div className="home-card">
+        <div className="col-md-4 p-3">
+          <div className="home-card home-card-1">
+            <div className="card-1 cards">
+              <Link to="/bmi" className="card-button btn btn-danger">
+                Check Your BMI
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* <div className="col-md-3 p-3 ">
+          <div className="home-card home-card-4 ">
             <div className="card-4 cards"></div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <footer className="text-light footer p-5">
@@ -100,74 +107,6 @@ const Home = () => {
         </div>
       </footer>
 
-      {/* <ReactSpeedometer
-        needleHeightRatio={0.7}
-        maxSegmentLabels={5}
-        segments={5555}
-        needleColor="yellow"
-        startColor="blue"
-        endColor="red"
-        value={333}
-      />
-      <ReactSpeedometer
-        value={777}
-        needleColor="yellow"
-        startColor="#AAF"
-        endColor="tomato"
-        needleHeightRatio={0.5}
-        currentValueText="Happiness Level"
-        customSegmentLabels={[
-          {
-            text: "Very Bad",
-            position: "OUTSIDE",
-            color: "#555",
-          },
-          {
-            text: "Bad",
-            position: "OUTSIDE",
-            color: "#555",
-          },
-          {
-            text: "Ok",
-            position: "OUTSIDE",
-            color: "#555",
-          },
-          {
-            text: "Good",
-            position: "OUTSIDE",
-            color: "#555",
-          },
-          {
-            text: "Very Good",
-            position: "OUTSIDE",
-            color: "#666",
-          },
-        ]}
-      />
-      <div className="row p-3">
-        <div className="col-md-3 p-3">
-          <div className="home-card home-card-1">
-            <div className="card-1 cards">
-              <button className="card-button btn btn-warning">Check</button>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3 p-3">
-          <div className="home-card home-card-2">
-            <div className="card-2 cards"></div>
-          </div>
-        </div>
-        <div className="col-md-3 p-3">
-          <div className="home-card home-card-3">
-            <div className="card-3 cards"></div>
-          </div>
-        </div>
-        <div className="col-md-3 p-3 home-card-4">
-          <div className="home-card">
-            <div className="card-4 cards"></div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };
