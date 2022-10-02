@@ -23,7 +23,10 @@ const Disease = () => {
               <div className="col">
                 <div className="card h-100">
                   <div className="card-body">
-                    <h5 className="card-title">{cards.disease}</h5>
+                    <h5 className="card-title">
+                      {cards.disease}(
+                      <label className="text-danger">{cards.avg}%</label>)
+                    </h5>
                     <p className="card-text">
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This card has even

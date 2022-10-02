@@ -44,7 +44,7 @@ const Home = () => {
         <div className="col-md-4 p-3">
           <div className="home-card home-card-1">
             <div className="card-1 cards">
-              <Link to="/bmi" className="card-button btn btn-danger">
+              <Link to="/bmi" className="card-button btn btn-warning">
                 Check Your BMI
               </Link>
             </div>
@@ -77,7 +77,7 @@ const Home = () => {
           <div className="col">
             <h2>Our Services</h2>
             <div className="ms-3">
-              <Link className="footer-a" to="">
+              <Link className="footer-a" to="/entry">
                 Disease Checker
               </Link>
               <br />
