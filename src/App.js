@@ -11,6 +11,7 @@ import BMI from "./Pages/bmi";
 import Food from "./Pages/Food";
 import Nav from "./Pages/nav";
 import BMISPEEDO from "./Pages/bmi_speedo";
+import Disease from "./Pages/disease";
 
 const App = () => {
   function CheckData() {
@@ -32,7 +33,7 @@ const App = () => {
         <Route element={<CheckData />}>
           <Route path="/" element={<Home />} />
           <Route path="/entry" element={<Entry />} />
-          <Route path="/entry/:g/:a/:c" element={<Entry />} />
+          <Route path="/entry/:g/:a/:c" element={<Disease />} />
           <Route path="/bmi" element={<BMI />} />
           <Route path="/Food" element={<Food />} />
           <Route path="/bmi/:bmi" element={<BMISPEEDO />} />
