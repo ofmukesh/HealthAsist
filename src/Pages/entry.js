@@ -9,8 +9,16 @@ const Entry = () => {
             <div class="img-left d-none d-md-flex"></div>
 
             <div class="card-body">
-              <h4 class="title text-center mt-4">Check predicted of disease </h4>
-              <form action="#" class="form-box px-3">
+              <h4 class="title text-center mt-4">
+                Check predicted of disease{" "}
+              </h4>
+              <form
+                action="#"
+                class="form-box px-3"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                }}
+              >
                 <div class="form-input">
                   <span>👤</span>
                   <input
@@ -21,13 +29,11 @@ const Entry = () => {
                   />
                 </div>
                 <div class="form-input">
-                  <span>🔞</span>
+                  <span>📆</span>
                   <input type="number" placeholder="Age" tabindex="10" />
                 </div>
                 <div class="form-input">
-                  <span>
-                    🗺️
-                  </span>
+                  <span>🗺️</span>
                   <input type="text" placeholder="Location" tabindex="10" />
                 </div>
 

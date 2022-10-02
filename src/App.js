@@ -3,13 +3,13 @@ import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import "./Assets/nav.css"
 import Home from "./Pages/home";
 import Entry from "./Pages/entry";
 import { Erorr404, Offline500 } from "./Pages/Error/index";
 import BMI from "./Pages/bmi";
 import Food from "./Pages/Food";
-
-
+import Nav from "./Pages/nav";
 
 const App = () => {
   function CheckData() {
@@ -19,7 +19,12 @@ const App = () => {
     // if (!localStorage.getItem("user_name") && !localStorage.getItem("user_id")) {
     //   return <Navigate to="/entry" />;
     // } else {
-    return <Outlet />;
+    return (
+      <>
+        <Nav />
+        <Outlet />
+      </>
+    );
     // }
   }
   return (
