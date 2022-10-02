@@ -23,7 +23,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="row p-3">
+      <div className="row p-5">
         <div className="col-md-3 p-3">
           <div className="home-card home-card-1">
             <div className="card-1 cards">
@@ -36,6 +36,9 @@ const Home = () => {
         <div className="col-md-3 p-3">
           <div className="home-card home-card-2">
             <div className="card-2 cards"></div>
+            <Link to="bmi" className="card-button btn btn-warning">
+                Check
+              </Link>
           </div>
         </div>
         <div className="col-md-3 p-3">
