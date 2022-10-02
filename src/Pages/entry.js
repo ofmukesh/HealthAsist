@@ -1,5 +1,4 @@
 import React from "react";
-import api from "../Services/api";
 
 const Entry = () => {
   function Submit(e) {
@@ -11,7 +10,7 @@ const Entry = () => {
       e.target.age.value +
       "/" +
       e.target.city.value;
-    console.log(url);
+    window.location.href = url;
   }
   return (
     <div className="entry">
@@ -49,7 +48,7 @@ const Entry = () => {
                     <option value="" disabled>
                       Gender
                     </option>
-                    <option value="Male">MAle</option>
+                    <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
                   </select>

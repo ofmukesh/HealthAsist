@@ -18,7 +18,7 @@ const Nav = () => {
             <b style={{ fontSize: "25px" }}>Health Assist</b>
           </Link>
           <div className="d-flex">
-            <Link className="m-2 nav-items" to="">
+            <Link className="m-2 nav-items" to="/entry">
               <b>Disease Checker</b>
             </Link>
             <Link className="m-2 nav-items" to="/bmi">
